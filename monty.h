@@ -91,9 +91,10 @@ stack_t *createNode(int n);
 void freeNode(void);
 
 /*error handling*/
-void error(int errorType, ...);
+void errorI(int errorType, ...);
 
 /*stack functions handling*/
 void pushElement(stack_t  **newElement, unsigned int);
 void printStack(stack_t **stackHead, unsigned int);
+void printTopElement(stack_t ** stackHead, unsigned int lineNumber);
 #endif

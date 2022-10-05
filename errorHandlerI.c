@@ -1,12 +1,12 @@
 #include "monty.h"
 
 /**
- * error - prints the error messsage according to the error type
+ * errorI - prints the error messsage according to the error type
  * @errorType: number represents the error type
  *
  * Return: void
  */
-void error(int errorType, ...)
+void errorI(int errorType, ...)
 {
 	va_list args;
 	char *opcode;
@@ -31,6 +31,9 @@ void error(int errorType, ...)
 			break;
 		case 5:
 			fprintf(stderr, "L%d: usage: push integer\n",  va_arg(args, int));
+			break;
+		case 6:
+			fprintf(stderr, "L%d: can't pint, stack empty\n", va_arg(args, int));
 			break;
 		default:
 			break;

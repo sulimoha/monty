@@ -13,7 +13,7 @@ void openFile(char *fileName)
 
 	if (fileName == NULL || fd == NULL)
 	{
-		error(2, fileName);
+		errorI(2, fileName);
 	}
 	readFile(fd);
 	fclose(fd);

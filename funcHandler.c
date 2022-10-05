@@ -15,6 +15,7 @@ void pickFunc(char *opcode, char *value, int lineNumber)
 	instruction_t funcList[] = {
 		{"push", pushElement},
 		{"pall", printStack},
+		{"pint", printTopElement},
 		{NULL, NULL}
 	};
 
@@ -28,7 +29,7 @@ void pickFunc(char *opcode, char *value, int lineNumber)
 	}
 	if (flag == 1)
 	{
-		error(3, lineNumber, opcode);
+		errorI(3, lineNumber, opcode);
 	}
 }
 
@@ -56,13 +57,13 @@ void callFunc(opcodeFunc func, char *opcode, char *value, int lineNumber)
 		}
 		if (value == NULL)
 		{
-			error(5, lineNumber);
+			errorI(5, lineNumber);
 		}
 		for (i = 0; value[i] != '\0'; i++)
 		{
 			if (isdigit(value[i]) == 0)
 			{
-				error(5, lineNumber);
+				errorI(5, lineNumber);
 			}
 		}
 		node = createNode(flag * atoi(value));
