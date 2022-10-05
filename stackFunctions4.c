@@ -44,6 +44,10 @@ void divTopTwoElements(stack_t **stackHead, unsigned int lineNumber)
 	{
 		errorII(11, lineNumber);
 	}
+	if ((*stackHead)->n == 0)
+	{
+		errorII(12, lineNumber);
+	}
 	(*stackHead) = (*stackHead)->next;
 	sum = (*stackHead)->n / (*stackHead)->prev->n;
 	(*stackHead)->n = sum;
