@@ -28,6 +28,10 @@ void errorII(int errorType, ...)
 			lineNumber = va_arg(args, int);
 			fprintf(stderr, "L%d: can't sub, stack too short\n", lineNumber);
 			break;
+		case 11:
+			lineNumber = va_arg(args, int);
+			fprintf(stderr, "L%d: can't div, stack too short\n", lineNumber);
+			break;
 		default:
 			break;
 	}

@@ -30,3 +30,23 @@ void subTopTwoElements(stack_t **stackHead, unsigned int lineNumber)
 	free((*stackHead)->prev);
 	(*stackHead)->prev = NULL;
 }
+/**
+ * divTopTwoElements - divides the second top element of the stack
+ * by the top element of the stack.
+ * @stackHead: a pointer to the head of the stack
+ * @lineNumber: the line number of the opcode
+ */
+void divTopTwoElements(stack_t **stackHead, unsigned int lineNumber)
+{
+	int sum;
+
+	if (stackHead == NULL || *stackHead == NULL || (*stackHead)->next == NULL)
+	{
+		errorII(11, lineNumber);
+	}
+	(*stackHead) = (*stackHead)->next;
+	sum = (*stackHead)->n / (*stackHead)->prev->n;
+	(*stackHead)->n = sum;
+	free((*stackHead)->prev);
+	(*stackHead)->prev = NULL;
+}

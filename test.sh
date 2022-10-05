@@ -19,3 +19,13 @@ echo ============ 4. add ============
 ./monty bytecodes/12.m
 echo ================ 6. sub =============
 ./monty bytecodes/19.m
+echo ================ 7. div =================
+./monty bytecodes/19div.m
+echo ================ 8. mul =================
+./monty bytecodes/19mul.m
+echo ================ 9. mod =================
+./monty bytecodes/19mod.m
+echo ================ 10. comments =================
+./monty bytecodes/19comm.m
+echo ================ 11. pchar =================
+./monty bytecodes/19pchar.m
