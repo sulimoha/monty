@@ -3,8 +3,6 @@
 /**
  * errorII - prints the error messsage according to the error type
  * @errorType: number represents the error type
- *
- * Return: void
  */
 void errorII(int errorType, ...)
 {
@@ -35,6 +33,10 @@ void errorII(int errorType, ...)
 		case 12:
 			lineNumber = va_arg(args, int);
 			fprintf(stderr, "L%d: division by zero\n", lineNumber);
+			break;
+		case 13:
+			lineNumber = va_arg(args, int);
+			fprintf(stderr, "L%d: can't mul, stack too short\n", lineNumber);
 			break;
 		default:
 			break;

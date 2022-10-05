@@ -93,6 +93,7 @@ void freeNode(void);
 /*error handling*/
 void errorI(int errorType, ...);
 void errorII(int errorType, ...);
+void errorIII(int errorType, ...);
 
 /*stack functions handling*/
 void pushElement(stack_t  **newElement, unsigned int);
@@ -100,6 +101,10 @@ void printStack(stack_t **stackHead, unsigned int);
 void printTopElement(stack_t ** stackHead, unsigned int lineNumber);
 void popElement(stack_t **stackHead, unsigned int lineNumber);
 void swapTopTwoElements(stack_t **stackHead, unsigned int lineNumber);
-void addTopTwoElements(stack_t **stackHead, unsigned int lineNumber);void nop(stack_t **stackHead, unsigned int lineNumber);
-void subTopTwoElements(stack_t **stackHead, unsigned int lineNumber);void divTopTwoElements(stack_t **stackHead, unsigned int lineNumber); 
+void addTopTwoElements(stack_t **stackHead, unsigned int lineNumber);
+void nop(stack_t **stackHead, unsigned int lineNumber);
+void subTopTwoElements(stack_t **stackHead, unsigned int lineNumber);
+void divTopTwoElements(stack_t **stackHead, unsigned int lineNumber);
+void mulTopTwoElements(stack_t **stackHead, unsigned int lineNumber);
+void modTopTwoElements(stack_t **stackHead, unsigned int lineNumber);
 #endif
