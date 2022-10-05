@@ -35,7 +35,7 @@ void addTopTwoElements(stack_t **stackHead, unsigned int lineNumber)
 
 	if (stackHead == NULL || *stackHead == NULL || (*stackHead)->next == NULL)
 	{
-		errorI(8, lineNumber);
+		errorI(9, lineNumber);
 	}
 	(*stackHead) = (*stackHead)->next;
 	sum = (*stackHead)->n + (*stackHead)->prev->n;

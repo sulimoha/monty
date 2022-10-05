@@ -17,3 +17,5 @@ echo ============== 3. swap ==========
 ./monty bytecodes/09.m
 echo ============ 4. add ============
 ./monty bytecodes/12.m
+echo ================ 6. sub =============
+./monty bytecodes/19.m

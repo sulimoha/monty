@@ -100,4 +100,5 @@ void printTopElement(stack_t ** stackHead, unsigned int lineNumber);
 void popElement(stack_t **stackHead, unsigned int lineNumber);
 void swapTopTwoElements(stack_t **stackHead, unsigned int lineNumber);
 void addTopTwoElements(stack_t **stackHead, unsigned int lineNumber);void nop(stack_t **stackHead, unsigned int lineNumber);
+void subTopTwoElements(stack_t **stackHead, unsigned int lineNumber); 
 #endif
