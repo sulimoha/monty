@@ -92,6 +92,7 @@ void freeNode(void);
 
 /*error handling*/
 void errorI(int errorType, ...);
+void errorII(int errorType, ...);
 
 /*stack functions handling*/
 void pushElement(stack_t  **newElement, unsigned int);

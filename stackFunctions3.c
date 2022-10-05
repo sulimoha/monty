@@ -11,7 +11,7 @@ void swapTopTwoElements(stack_t **stackHead, unsigned int lineNumber)
 
 	if (stackHead == NULL || *stackHead == NULL || (*stackHead)->next == NULL)
 	{
-		errorI(8, lineNumber);
+		errorII(8, lineNumber);
 	}
 	temp = (*stackHead)->next;
 	(*stackHead)->next = temp->next;
@@ -35,7 +35,7 @@ void addTopTwoElements(stack_t **stackHead, unsigned int lineNumber)
 
 	if (stackHead == NULL || *stackHead == NULL || (*stackHead)->next == NULL)
 	{
-		errorI(9, lineNumber);
+		errorII(9, lineNumber);
 	}
 	(*stackHead) = (*stackHead)->next;
 	sum = (*stackHead)->n + (*stackHead)->prev->n;

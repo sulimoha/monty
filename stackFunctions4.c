@@ -22,7 +22,7 @@ void subTopTwoElements(stack_t **stackHead, unsigned int lineNumber)
 
 	if (stackHead == NULL || *stackHead == NULL || (*stackHead)->next == NULL)
 	{
-		errorI(10, lineNumber);
+		errorII(10, lineNumber);
 	}
 	(*stackHead) = (*stackHead)->next;
 	sum = (*stackHead)->n - (*stackHead)->prev->n;
