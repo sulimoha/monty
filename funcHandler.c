@@ -16,6 +16,7 @@ void pickFunc(char *opcode, char *value, int lineNumber)
 		{"push", pushElement},
 		{"pall", printStack},
 		{"pint", printTopElement},
+		{"pop", popElement},
 		{NULL, NULL}
 	};
 
@@ -59,6 +60,11 @@ void callFunc(opcodeFunc func, char *opcode, char *value, int lineNumber)
 		{
 			value++;
 			flag = -1;
+		}
+		if (value != NULL && value[0] == '+')
+		{
+			value++;
+			flag = 1;
 		}
 		if (value == NULL)
 		{

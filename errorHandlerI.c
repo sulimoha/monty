@@ -35,6 +35,9 @@ void errorI(int errorType, ...)
 		case 6:
 			fprintf(stderr, "L%d: can't pint, stack empty\n", va_arg(args, int));
 			break;
+		case 7:
+			fprintf(stderr, "L%d: can't pop an empty stack\n", va_arg(args, int));
+			break;
 		default:
 			break;
 	}

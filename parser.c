@@ -34,7 +34,7 @@ void parseLine(char *buffer, int lineNumber)
 		{
 			if (isdigit(value[0]) != 0)
 			{
-				if (value[i] < 45 || value[i] > 57)
+				if (value[i] != 43  && value[i] != 45 && (value[i] < 48 || value[i] > 57))
 				{
 					value[i] = '\0';
 					break;
