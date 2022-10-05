@@ -19,6 +19,7 @@ void pickFunc(char *opcode, char *value, int lineNumber)
 		{"pop", popElement},
 		{"swap", swapTopTwoElements},
 		{"add", addTopTwoElements},
+		{"nop", nop},
 		{NULL, NULL}
 	};
 
