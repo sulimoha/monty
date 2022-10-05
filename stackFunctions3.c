@@ -24,4 +24,22 @@ void swapTopTwoElements(stack_t **stackHead, unsigned int lineNumber)
 	temp->prev = NULL;
 	*stackHead = temp;
 }
+/**
+ * addTopTwoElements - adds the top two elements of the stack.
+ * @stackHead: a pointer to the head of the stack
+ * @lineNumber: the line number of the opcode
+ */
+void addTopTwoElements(stack_t **stackHead, unsigned int lineNumber)
+{
+	int sum;
 
+	if (stackHead == NULL || *stackHead == NULL || (*stackHead)->next == NULL)
+	{
+		errorI(8, lineNumber);
+	}
+	(*stackHead) = (*stackHead)->next;
+	sum = (*stackHead)->n + (*stackHead)->prev->n;
+	(*stackHead)->n = sum;
+	free((*stackHead)->prev);
+	(*stackHead)->prev = NULL;
+}
