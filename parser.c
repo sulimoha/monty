@@ -10,8 +10,7 @@
 void parseLine(char *buffer, int lineNumber)
 {
 	size_t i;
-	char *opcode;
-	char *value;
+	char *opcode, *value;
 	const char *delim = "\n ";
 
 	if (buffer == NULL)
@@ -22,8 +21,10 @@ void parseLine(char *buffer, int lineNumber)
 		for (i = 0; i < strlen(opcode); i++)
 		{
 			if (opcode[i] < 97 || opcode[i] > 122)
+			{
 				opcode[i] = '\0';
 				break;
+			}
 		}
 	}
 	value = strtok(NULL, delim);
@@ -34,8 +35,10 @@ void parseLine(char *buffer, int lineNumber)
 			if (isdigit(value[0]) != 0)
 			{
 				if (value[i] < 45 || value[i] > 57)
+				{
 					value[i] = '\0';
 					break;
+				}
 			}
 		}
 	}
