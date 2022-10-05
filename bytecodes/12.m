@@ -1,6 +1,5 @@
-push 1
-push 2
-push 3
+push 2147483640
+push 9
 pall
 add
 pall

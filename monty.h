@@ -87,7 +87,7 @@ void pickFunc(char *opcode, char *value, int lineNumber);
 void callFunc(opcodeFunc func, char *opcode, char *value, int lineNumber);
 
 /*node handling*/
-stack_t *createNode(int n);
+stack_t *createNode(unsigned int n);
 void freeNode(void);
 
 /*error handling*/
@@ -99,5 +99,5 @@ void printStack(stack_t **stackHead, unsigned int);
 void printTopElement(stack_t ** stackHead, unsigned int lineNumber);
 void popElement(stack_t **stackHead, unsigned int lineNumber);
 void swapTopTwoElements(stack_t **stackHead, unsigned int lineNumber);
-void addTopTwoElements(stack_t **stackHead, unsigned int lineNumber);
+void addTopTwoElements(stack_t **stackHead, unsigned int lineNumber);void nop(stack_t **stackHead, unsigned int lineNumber);
 #endif

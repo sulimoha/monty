@@ -6,7 +6,7 @@
  *
  * Return: a pointer to the node if success or NULL if failed
  */
-stack_t *createNode(int n)
+stack_t *createNode(unsigned int n)
 {
 	stack_t *node;
 
