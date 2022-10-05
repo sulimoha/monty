@@ -98,4 +98,5 @@ void pushElement(stack_t  **newElement, unsigned int);
 void printStack(stack_t **stackHead, unsigned int);
 void printTopElement(stack_t ** stackHead, unsigned int lineNumber);
 void popElement(stack_t **stackHead, unsigned int lineNumber);
+void swapTopTwoElements(stack_t **stackHead, unsigned int lineNumber);
 #endif
