@@ -19,6 +19,11 @@ void pickFunc(char *opcode, char *value, int lineNumber)
 		{NULL, NULL}
 	};
 
+	if (opcode == NULL && value == NULL)
+	{
+		return;
+	}
+
 	for (flag = 1, i = 0; funcList[i].opcode != NULL; i++)
 	{
 		if (strcmp(opcode, funcList[i].opcode) == 0)
