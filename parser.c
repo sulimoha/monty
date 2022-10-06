@@ -22,8 +22,7 @@ void parseLine(char *buffer, int lineNumber)
 		{
 			if (opcode[i] < 97 || opcode[i] > 122)
 			{
-				opcode[i] = '\0';
-				break;
+				return;
 			}
 		}
 	}
@@ -42,7 +41,5 @@ void parseLine(char *buffer, int lineNumber)
 			}
 		}
 	}
-	if (strlen(opcode) == 0)
-		opcode = NULL;
 	pickFunc(opcode, value, lineNumber);
 }
