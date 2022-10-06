@@ -108,4 +108,5 @@ void divTopTwoElements(stack_t **stackHead, unsigned int lineNumber);
 void mulTopTwoElements(stack_t **stackHead, unsigned int lineNumber);
 void modTopTwoElements(stack_t **stackHead, unsigned int lineNumber);
 void pchar(stack_t **stackHead, unsigned int lineNumber);
+void pstr(stack_t **stackHead, unsigned int lineNumber);
 #endif

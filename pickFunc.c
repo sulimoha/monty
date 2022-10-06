@@ -25,6 +25,7 @@ void pickFunc(char *opcode, char *value, int lineNumber)
 		{"mul", mulTopTwoElements},
 		{"mod", modTopTwoElements},
 		{"pchar", pchar},
+		{"pstr", pstr},
 		{NULL, NULL}
 	};
 

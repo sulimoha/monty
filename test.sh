@@ -29,3 +29,5 @@ echo ================ 10. comments =================
 ./monty bytecodes/19comm.m
 echo ================ 11. pchar =================
 ./monty bytecodes/28.m
+echo ================ 12. pstr =================
+./monty bytecodes/31.m 
