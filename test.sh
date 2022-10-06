@@ -31,3 +31,7 @@ echo ================ 11. pchar =================
 ./monty bytecodes/28.m
 echo ================ 12. pstr =================
 ./monty bytecodes/31.m 
+echo ================ 13. rotl =================
+./monty bytecodes/35.m 
+echo ================ 14. rotr =================
+./monty bytecodes/355.m 

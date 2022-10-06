@@ -1,12 +1,9 @@
 #include "monty.h"
-
 /**
  * pickFunc - picks the proper function to handel the opcode
  * @opcode: opcode
  * @value: argument of the opcode
  * @lineNumber: lineNumber
- *
- * Return: void
  */
 void pickFunc(char *opcode, char *value, int lineNumber)
 {
@@ -26,6 +23,8 @@ void pickFunc(char *opcode, char *value, int lineNumber)
 		{"mod", modTopTwoElements},
 		{"pchar", pchar},
 		{"pstr", pstr},
+		{"rotl", rotl},
+		{"rotr", rotr},
 		{NULL, NULL}
 	};
 

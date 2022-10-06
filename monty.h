@@ -109,4 +109,6 @@ void mulTopTwoElements(stack_t **stackHead, unsigned int lineNumber);
 void modTopTwoElements(stack_t **stackHead, unsigned int lineNumber);
 void pchar(stack_t **stackHead, unsigned int lineNumber);
 void pstr(stack_t **stackHead, unsigned int lineNumber);
+void rotl(stack_t **stackHead, unsigned int lineNumber);
+void rotr(stack_t **stackHead, unsigned int lineNumber);
 #endif
