@@ -24,7 +24,6 @@ void pickFunc(char *opcode, char *value, int lineNumber)
 		{"div", divTopTwoElements},
 		{"mul", mulTopTwoElements},
 		{"mod", modTopTwoElements},
-		{"#", nop},
 		{NULL, NULL}
 	};
 
@@ -32,7 +31,10 @@ void pickFunc(char *opcode, char *value, int lineNumber)
 	{
 		return;
 	}
-
+	if (opcode[0] == '#')
+	{
+		return;
+	}
 	for (flag = 1, i = 0; funcList[i].opcode != NULL; i++)
 	{
 		if (strcmp(opcode, funcList[i].opcode) == 0)
