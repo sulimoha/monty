@@ -28,4 +28,4 @@ echo ================ 9. mod =================
 echo ================ 10. comments =================
 ./monty bytecodes/19comm.m
 echo ================ 11. pchar =================
-./monty bytecodes/19pchar.m
+./monty bytecodes/28.m
