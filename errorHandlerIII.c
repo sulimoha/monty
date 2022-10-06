@@ -20,11 +20,11 @@ void errorIII(int errorType, ...)
 			break;
 		case 15:
 			lineNumber = va_arg(args, int);
-			fprintf(stderr, "L%d: can't pchar, value out of range\n", lineNumber);
+			fprintf(stderr, "L%d: can't pchar, stack empty\n", lineNumber);
 			break;
 		case 16:
 			lineNumber = va_arg(args, int);
-			fprintf(stderr, "L%d: can't pchar, stack empty\n", lineNumber);
+			fprintf(stderr, "L%d: can't pchar, value out of range\n", lineNumber);
 			break;
 		default:
 			break;
