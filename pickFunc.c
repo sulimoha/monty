@@ -4,11 +4,11 @@
  * @opcode: opcode
  * @value: argument of the opcode
  * @lineNumber: lineNumber
+ * @dataFormat: stack (default) or queue
  */
-void pickFunc(char *opcode, char *value, int lineNumber)
+void pickFunc(char *opcode, char *value, int lineNumber, int dataFormat)
 {
-	int i;
-	int flag;
+	int i, flag;
 	instruction_t funcList[] = {
 		{"push", pushElement},
 		{"pall", printStack},
@@ -40,7 +40,7 @@ void pickFunc(char *opcode, char *value, int lineNumber)
 	{
 		if (strcmp(opcode, funcList[i].opcode) == 0)
 		{
-			callFunc(funcList[i].f, opcode, value, lineNumber);
+			callFunc(funcList[i].f, opcode, value, lineNumber, dataFormat);
 			flag = 0;
 		}
 	}

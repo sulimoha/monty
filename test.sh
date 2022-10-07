@@ -35,3 +35,5 @@ echo ================ 13. rotl =================
 ./monty bytecodes/35.m 
 echo ================ 14. rotr =================
 ./monty bytecodes/355.m 
+echo ================ 15. stack, queue =================
+./monty bytecodes/47.m 

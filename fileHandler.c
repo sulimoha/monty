@@ -30,10 +30,11 @@ void readFile(FILE *fd)
 	int lineNumber;
 	char *buffer = NULL;
 	size_t len = 0;
+	int dataFormat = 0;
 
 	for (lineNumber = 1; getline(&buffer, &len, fd) != -1; lineNumber++)
 	{
-		parseLine(buffer, lineNumber);
+		parseLine(buffer, lineNumber, dataFormat);
 	}
 	free(buffer);
 }

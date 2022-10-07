@@ -1,13 +1,12 @@
 #include "monty.h"
-
 /**
  * parseLine - tokenise the line into tokens to extract the function to call
  * @buffer: line to be tokenised read from the file
  * @lineNumber: line Number
+ * @dataFormat: format of the data default is stack(LIFO) or queue (FIFO)
  *
- * Return: void
  */
-void parseLine(char *buffer, int lineNumber)
+void parseLine(char *buffer, int lineNumber, int dataFormat)
 {
 	size_t i;
 	char *opcode, *value;
@@ -16,14 +15,14 @@ void parseLine(char *buffer, int lineNumber)
 	if (buffer == NULL)
 		errorI(4);
 	opcode = strtok(buffer, delim);
+	if (opcode == NULL)
+		return;
 	if (opcode != NULL)
 	{
 		for (i = 0; i < strlen(opcode); i++)
 		{
 			if (opcode[i] < 97 || opcode[i] > 122)
-			{
 				return;
-			}
 		}
 	}
 	value = strtok(NULL, delim);
@@ -41,5 +40,9 @@ void parseLine(char *buffer, int lineNumber)
 			}
 		}
 	}
-	pickFunc(opcode, value, lineNumber);
+	if (strcmp(opcode, "stack") == 0)
+		dataFormat = 0;
+	if (strcmp(opcode, "queue") == 0)
+		dataFormat = 1;
+	pickFunc(opcode, value, lineNumber, dataFormat);
 }

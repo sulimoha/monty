@@ -80,11 +80,11 @@ void openFile(char *fileName);
 void readFile(FILE *fd);
 
 /*parser*/
-void parseLine(char *buffer, int lineNumber) ;
+void parseLine(char *buffer, int lineNumber, int dataFormat);
 
 /*function handling*/
-void pickFunc(char *opcode, char *value, int lineNumber);
-void callFunc(opcodeFunc func, char *opcode, char *value, int lineNumber);
+void pickFunc(char *opcode, char *value, int lineNumber, int dataFormat);
+void callFunc(opcodeFunc func, char *opcode, char *value, int lineNumber, int dataFormat);
 
 /*node handling*/
 stack_t *createNode(unsigned int n);
@@ -111,4 +111,7 @@ void pchar(stack_t **stackHead, unsigned int lineNumber);
 void pstr(stack_t **stackHead, unsigned int lineNumber);
 void rotl(stack_t **stackHead, unsigned int lineNumber);
 void rotr(stack_t **stackHead, unsigned int lineNumber);
+
+/*quwuw functions handling*/
+void enqueueElement(stack_t  **newElement, unsigned int lineNumber);
 #endif
