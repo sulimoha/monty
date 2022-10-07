@@ -34,7 +34,7 @@ void readFile(FILE *fd)
 
 	for (lineNumber = 1; getline(&buffer, &len, fd) != -1; lineNumber++)
 	{
-		parseLine(buffer, lineNumber, dataFormat);
+		dataFormat = parseLine(buffer, lineNumber, dataFormat);
 	}
 	free(buffer);
 }

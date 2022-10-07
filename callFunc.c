@@ -35,11 +35,11 @@ void callFunc(opcodeFunc func, char *opcode, char *value,
 				errorI(5, lineNumber);
 		}
 		node = createNode(flag * atoi(value));
-		func(&node, lineNumber);
+		if (dataFormat == 0)
+			func(&node, lineNumber);
+		if (dataFormat == 1)
+			enqueueElement(&node, lineNumber);
 	}
 	else
-	{
-
 		func(&head, lineNumber);
-	}
 }

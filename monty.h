@@ -80,7 +80,7 @@ void openFile(char *fileName);
 void readFile(FILE *fd);
 
 /*parser*/
-void parseLine(char *buffer, int lineNumber, int dataFormat);
+int parseLine(char *buffer, int lineNumber, int dataFormat);
 
 /*function handling*/
 void pickFunc(char *opcode, char *value, int lineNumber, int dataFormat);

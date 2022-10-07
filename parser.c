@@ -5,8 +5,9 @@
  * @lineNumber: line Number
  * @dataFormat: format of the data default is stack(LIFO) or queue (FIFO)
  *
+ * Return: 0 if stack, 1 if queue
  */
-void parseLine(char *buffer, int lineNumber, int dataFormat)
+int parseLine(char *buffer, int lineNumber, int dataFormat)
 {
 	size_t i;
 	char *opcode, *value;
@@ -16,13 +17,13 @@ void parseLine(char *buffer, int lineNumber, int dataFormat)
 		errorI(4);
 	opcode = strtok(buffer, delim);
 	if (opcode == NULL)
-		return;
+		return (dataFormat);
 	if (opcode != NULL)
 	{
 		for (i = 0; i < strlen(opcode); i++)
 		{
 			if (opcode[i] < 97 || opcode[i] > 122)
-				return;
+				return (dataFormat);
 		}
 	}
 	value = strtok(NULL, delim);
@@ -41,8 +42,9 @@ void parseLine(char *buffer, int lineNumber, int dataFormat)
 		}
 	}
 	if (strcmp(opcode, "stack") == 0)
-		dataFormat = 0;
+		return (0);
 	if (strcmp(opcode, "queue") == 0)
-		dataFormat = 1;
+		return (1);
 	pickFunc(opcode, value, lineNumber, dataFormat);
+	return (dataFormat);
 }
